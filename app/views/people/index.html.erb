@@ -21,18 +21,6 @@
   </tbody>
 </table>
 
-
-<br/><br/> ********** default stuff here
-
-<div id="people">
-  <% @people.each do |person| %>
-    <%= render person %>
-    <p>
-      <%= link_to "Show this person", person %>
-    </p>
-  <% end %>
-</div>
-
 <%= link_to "New person", new_person_path %>
 
 
@@ -57,7 +45,10 @@
   }
 
   $(document).ready(function(){
-     $("#ordersTable").DataTable();
+     $("#ordersTable").DataTable({
+       pageLength:50,
+       order:[[0, 'desc']]
+     })
   });
 
 
