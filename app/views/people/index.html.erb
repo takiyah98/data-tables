@@ -1,0 +1,68 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>People</h1>
+
+
+<table id="ordersTable" class="table table-striped">
+<thead>
+<tr>
+  <th>Firstname</th>
+  <th>Lastname</th>
+</tr>
+</thead>
+
+<tbody>
+   <% @people.each do |person| %>
+    <tr>
+      <td><%= person.first_name %></td>
+      <td><%= person.last_name %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+
+
+<br/><br/> ********** default stuff here
+
+<div id="people">
+  <% @people.each do |person| %>
+    <%= render person %>
+    <p>
+      <%= link_to "Show this person", person %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New person", new_person_path %>
+
+
+<script>
+    window.addEventListener('DOMContentLoaded', function(e){
+      console.log(typeof $)
+    });
+
+
+  window.onload = function() {
+    console.log('line 45');
+    if (window.jQuery) {
+        // jQuery is loaded
+      //alert("Yeah query is loaded");
+      // test = $("#ordersTable")
+       doc = $(document)
+       //alert(doc)
+       //alert(test)
+    } else {
+        // jQuery is not loaded
+         alert("Jquery Doesn't Work");
+  }
+
+  $(document).ready(function(){
+     $("#ordersTable").DataTable();
+  });
+
+
+}
+
+console.log('line 55')
+
+</script>
