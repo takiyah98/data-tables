@@ -26,34 +26,14 @@
 
 <script>
     window.addEventListener('DOMContentLoaded', function(e){
-      console.log(typeof $)
+      $(document).ready(function(){
+
+        $("#ordersTable").DataTable({
+          pageLength:50,
+          order:[[0, 'desc']]
+        })
+     });
     });
 
-
-  window.onload = function() {
-    console.log('line 45');
-    if (window.jQuery) {
-        // jQuery is loaded
-      //alert("Yeah query is loaded");
-      // test = $("#ordersTable")
-       doc = $(document)
-       //alert(doc)
-       //alert(test)
-    } else {
-        // jQuery is not loaded
-         alert("Jquery Doesn't Work");
-  }
-
-  $(document).ready(function(){
-     $("#ordersTable").DataTable({
-       pageLength:50,
-       order:[[0, 'desc']]
-     })
-  });
-
-
-}
-
-console.log('line 55')
 
 </script>
