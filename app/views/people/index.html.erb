@@ -1,18 +1,17 @@
-
-
 <p style="color: green"><%= notice %></p>
 
 <h1>People</h1>
 
-<%= link_to "Json Table", intent_path %>
+<%= link_to "Json Table", intent_path %> <br/>
 
 <!-- Large button group -->
 <div class="btn-group">
-  <button class="btn btn-default btn-lg dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Large button <span class="caret"></span>
+  <button class="btn btn-default btn-lg dropdown-toggle" type="button" data-toggle="dropdown" 
+           aria-haspopup="true" aria-expanded="false">
+    Regular Table <span class="caret"></span>
   </button>
   <ul class="dropdown-menu">
-    <li><a href="#">Action</a></li>
+    <li><%= link_to "Json Table", intent_path %></li>
     <li><a href="#">Another action</a></li>
     <li><a href="#">Something else here</a></li>
     <li role="separator" class="divider"></li>
