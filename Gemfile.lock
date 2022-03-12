@@ -68,15 +68,11 @@ GEM
       tzinfo (~> 2.0)
     addressable (2.8.0)
       public_suffix (>= 2.0.2, < 5.0)
-    autoprefixer-rails (10.4.2.0)
-      execjs (~> 2)
     bindex (0.8.1)
     bootsnap (1.11.1)
       msgpack (~> 1.2)
-    bootstrap (4.6.1)
-      autoprefixer-rails (>= 9.1.0)
-      popper_js (>= 1.14.3, < 2)
-      sassc-rails (>= 2.0.0)
+    bootstrap3-rails (3.2.0)
+      rails (>= 4.0.0)
     builder (3.2.4)
     capybara (3.36.0)
       addressable
@@ -95,7 +91,6 @@ GEM
       reline (>= 0.2.7)
     digest (3.1.0)
     erubi (1.10.0)
-    execjs (2.8.1)
     faker (2.20.0)
       i18n (>= 1.8.11, < 2)
     ffi (1.15.5)
@@ -147,7 +142,6 @@ GEM
     nio4r (2.5.8)
     nokogiri (1.13.3-arm64-darwin)
       racc (~> 1.4)
-    popper_js (1.16.0)
     public_suffix (4.0.6)
     puma (5.6.2)
       nio4r (~> 2.0)
@@ -239,7 +233,7 @@ PLATFORMS
 
 DEPENDENCIES
   bootsnap
-  bootstrap (~> 4.1)
+  bootstrap3-rails
   capybara
   debug
   faker (~> 2.20)
@@ -249,6 +243,7 @@ DEPENDENCIES
   jquery-rails (~> 4.4)
   puma (~> 5.0)
   rails (~> 7.0.2, >= 7.0.2.2)
+  sassc-rails
   selenium-webdriver
   sprockets-rails
   sqlite3 (~> 1.4)
