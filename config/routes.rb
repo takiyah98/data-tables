@@ -6,4 +6,8 @@ Rails.application.routes.draw do
   # root "articles#index"
 
   root 'people#index'
+
+  get "intent", to:"people#intent"
+  get "intentj", to:"people#intentj"
+
 end

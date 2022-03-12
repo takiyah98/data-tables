@@ -1,0 +1,32 @@
+<p> inside intent </p>
+<%= link_to "Regular Table", root_path %>
+
+
+<table id="intentTable" class="table table-striped">
+<thead>
+<tr>
+  <th>Firstname</th>
+  <th>Lastname</th>
+</tr>
+</thead>
+ <tbody>
+  </tbody>
+</table>
+
+
+<script>
+    window.addEventListener('DOMContentLoaded', function(e){
+      $(document).ready(function(){
+        table1 = $("#intentTable").DataTable({
+          ajax: "/intentj",
+          columns: [
+            { "data": "first_name" },
+            { "data": "last_name" }
+          ]
+
+        })
+     });
+
+    })
+
+</script>

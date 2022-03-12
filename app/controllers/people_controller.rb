@@ -4,11 +4,37 @@ class PeopleController < ApplicationController
   # GET /people or /people.json
   def index
     @people = Person.all
-  end
-
+ end
+ 
   # GET /people/1 or /people/1.json
   def show
   end
+
+  def intent
+  end
+
+ def intentj
+  p = Person.all
+  pJson = p.to_json #had issues reading this in to the datatable 
+  #  Rails.logger.info "to json"
+  # Rails.logger.info pJson
+   obj = {}
+   p1 = {first_name:'kiyah', last_name:'rainer'}
+   p2 = {first_name:'von', last_name:'parrish'}
+   list = []
+   list.push(p1)
+   list.push(p2)
+
+
+   @people = Person.all
+ #  obj[:data] = @people.to_json
+   obj[:data] = list
+
+   Rails.logger.info obj
+   
+   render json: obj
+end
+
 
   # GET /people/new
   def new
