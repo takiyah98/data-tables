@@ -19,8 +19,8 @@ class PeopleController < ApplicationController
   #  Rails.logger.info "to json"
   # Rails.logger.info pJson
    obj = {}
-   p1 = {first_name:'kiyah', last_name:'rainer'}
-   p2 = {first_name:'von', last_name:'parrish'}
+   p1 = {first_name:'kiyah', last_name:'rainer',id:1}
+   p2 = {first_name:'von', last_name:'parrish',id:2}
    list = []
    list.push(p1)
    list.push(p2)
