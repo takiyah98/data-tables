@@ -3,6 +3,7 @@ import "@hotwired/turbo-rails"
 import "controllers"
 
 
+//= require popper
 
 //= require bootstrap.min
 // require turbolinks
