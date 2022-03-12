@@ -22,6 +22,8 @@
       $(document).ready(function(){
         table1 = $("#intentTable").DataTable({
           ajax: "/intentj",
+          processing: '<i class="fa fa-spinner fa-spin" style="font-size:24px;color:rgb(75, 183, 245);"></i>',
+
           columns: [
             { "data": "first_name" },
             { "data": "last_name" },

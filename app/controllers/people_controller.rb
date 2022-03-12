@@ -31,7 +31,6 @@ class PeopleController < ApplicationController
    obj[:data] = list
 
    Rails.logger.info obj
-   
    render json: obj
 end
 

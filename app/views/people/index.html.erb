@@ -1,3 +1,5 @@
+
+
 <p style="color: green"><%= notice %></p>
 
 <h1>People</h1>
@@ -10,7 +12,7 @@
 <tr>
   <th>Firstname</th>
   <th>Lastname</th>
-  <th>Heading</th>
+  <th></th>
 </tr>
 </thead>
 
@@ -38,7 +40,7 @@
           columnDefs: [
             { targets: 1,
               render: function(data) {
-                return  '<%= link_to "New person", new_person_path %>'
+                return  '<%= link_to "New person-config", new_person_path %>'
               }
             }   
           ]
