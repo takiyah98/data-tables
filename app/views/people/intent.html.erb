@@ -34,7 +34,7 @@
             {
                 targets:-1, // Start with the last
                 render: function ( data, type, row, meta ) {
-                    console.log(row);
+                    //console.log(row);
                     //data = '<%= link_to "Regular Table", root_path %>';
                     data = '<a href="/people/' + row.id + '">' + row.first_name + '</a>';
                     return data;

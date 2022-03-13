@@ -1,7 +1,8 @@
 <ul class="nav nav-tabs">
-  <li role="presentation" class="active"><a href="#">Home</a></li>
-  <li role="presentation"><a href="#">Profile</a></li>
-  <li role="presentation"><a href="#">Messages</a></li>
+  <li id="one" role="presentation"><%= link_to "Regular Table", root_path %></li>
+  <li id="two" role="presentation"><%= link_to "Json Table", intent_path %></li>
+  <li id="three" role="presentation"><a href="/">reg2</a></li>
+  <li id="four" role="presentation"><a href="/intent" >json2</a></li>
 </ul>
 
 <br/><br/>
@@ -13,11 +14,40 @@
      Table <span class="caret"></span>
   </button>
   <ul class="dropdown-menu">
-    <li><%= link_to "Regular Table", intent_path %></li>
-    <li><%= link_to "Json Table", root_path %></li>
-    <li><a href="#">Another action</a></li>
-    <li><a href="#">Something else here</a></li>
+    <li><%= link_to "Regular Table", root_path %></li>
+    <li><%= link_to "Json Table", intent_path %></li>
+    <li><a href="#" >Another action</a></li>
+    <li><a href="#" >Something else here</a></li>
     <li role="separator" class="divider"></li>
     <li><a href="#">Separated link</a></li>
   </ul>
 </div>
+
+<script>
+
+window.addEventListener('DOMContentLoaded', function(e){
+    var activeId = localStorage.getItem("activeTab");
+    if(activeId) {
+        $("#"+activeId).addClass("active");
+    }
+    else {
+        $("#one").addClass("active") //set the first tab by default
+    }
+   
+    $(".nav li").on("click", function(e){
+      //  alert('in clicke')
+        var domElement = $(e.target).parent(".nav li");
+        var domId = domElement.attr('id')
+        localStorage.setItem("activeTab", domId); 
+    })
+});
+
+
+if (typeof(Storage) !== "undefined"){
+   // alert('Yay you have local/session storage')
+}else{
+   // alert('Sorry no web storage support...')
+}
+
+
+</script>
