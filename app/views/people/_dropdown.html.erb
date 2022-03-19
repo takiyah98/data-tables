@@ -3,9 +3,26 @@
   <li id="two" role="presentation"><%= link_to "Json Table", intent_path %></li>
   <li id="three" role="presentation"><a href="/">reg2</a></li>
   <li id="four" role="presentation"><a href="/intent" >json2</a></li>
+
+  <li class="dropdown active">
+  <a class="dropdown-toggle" id="dLabel"  data-toggle="dropdown"  aria-haspopup="true" aria-expanded="false">
+    Dropdown trigger    <b class="caret"></b></a>
+
+  <ul class="dropdown-menu pull-right" >
+    <li class="active"><a class="dropdown-item" href="#table1" data-toggle="tab">table1</a></li>
+    <li><a class="dropdown-item" href="#table2" data-toggle="tab">table2</a></li>
+  </ul>
+</li>
 </ul>
 
 <br/><br/>
+
+<div class="tab-content">
+    <div id="table1" class="tab-pane active"> table1</div>
+    <div id="table2" class="tab-pane"> table2</div>
+</div>
+
+</br></br>
 
 <!-- Large button group -->
 <div class="btn-group">
